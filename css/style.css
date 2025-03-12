@@ -1,0 +1,38 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #eee;
+}
+
+header,
+main,
+footer,
+section {
+  padding: 1rem;
+}
+
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+:root {
+  --clr-bg-primary: #ede8dc;
+  --clr-bg-secondary: #b17f59;
+
+  --clr-txt-primary: #ede8dc;
+}
+
+/* HEADER */
+header {
+  background-color: var(--clr-bg-secondary);
+  color: var(--clr-txt-primary);
+}
+
+/* MAIN */
+main {
+  background-color: var(--clr-bg-primary);
+}
