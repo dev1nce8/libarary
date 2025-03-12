@@ -6,13 +6,6 @@ body {
   background-color: #eee;
 }
 
-header,
-main,
-footer,
-section {
-  padding: 1rem;
-}
-
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -22,8 +15,15 @@ section {
 :root {
   --clr-bg-primary: #ede8dc;
   --clr-bg-secondary: #b17f59;
+  --clr-bg-accent: #a5b68d;
 
   --clr-txt-primary: #ede8dc;
+}
+
+button {
+  background-color: var(--clr-bg-accent);
+  border: none;
+  border-radius: 4px;
 }
 
 /* HEADER */
@@ -35,4 +35,51 @@ header {
 /* MAIN */
 main {
   background-color: var(--clr-bg-primary);
+  position: relative;
+
+  & .popup-form {
+    & .form-cont {
+      --border-radius: 8px;
+      --input-radius: 4px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: var(--border-radius);
+      background-color: var(--clr-bg-primary);
+      box-shadow: 0 0 2px var(--clr-bg-secondary);
+
+      & h2 {
+        background-color: var(--clr-bg-secondary);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+        padding: 0.5rem;
+        color: var(--clr-txt-primary);
+      }
+
+      & form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      & label > :first-child {
+        font-size: 0.9rem;
+        font-weight: bold;
+        display: flex;
+      }
+
+      & input {
+        border: none;
+        border-radius: var(--input-radius);
+        box-shadow: 1px 1px 2px #ccc;
+      }
+
+      & button {
+        border: none;
+        border-radius: var(--input-radius);
+        box-shadow: 1px 1px 2px var(--clr-bg-accent);
+        padding: 0.3em 1em;
+      }
+    }
+  }
 }

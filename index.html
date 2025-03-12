@@ -14,7 +14,22 @@
         <h1 class="logo">library</h1>
       </header>
       <main>
-        <button>Add Book</button>
+        <div class="popup-form">
+          <button>Add Book</button>
+          <div class="form-cont">
+            <h2>Add Form</h2>
+            <form>
+              <label>
+                <span>Title:</span> <input type="text" name="title" />
+              </label>
+              <label>
+                <span>Author:</span> <input type="text" name="author" />
+              </label>
+              <button type="button">Submit</button>
+              <button type="clear">Reset</button>
+            </form>
+          </div>
+        </div>
         <ul id="book-list">
           <!-- Books from the script will be here-->
         </ul>

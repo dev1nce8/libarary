@@ -5,6 +5,14 @@ button {
   cursor: pointer;
 }
 
+header,
+main,
+footer,
+section,
+form {
+  padding: 1rem;
+}
+
 input,
 textarea {
   appearance: none;
