@@ -16,8 +16,13 @@ body {
   --clr-bg-primary: #ede8dc;
   --clr-bg-secondary: #b17f59;
   --clr-bg-accent: #a5b68d;
+  --clr-bg-error: #f0a04b;
 
   --clr-txt-primary: #ede8dc;
+}
+
+.hidden {
+  display: none;
 }
 
 button {
@@ -36,6 +41,53 @@ header {
 main {
   background-color: var(--clr-bg-primary);
   position: relative;
+
+  & #book-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+
+    & .book {
+      --border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 1px #333;
+      min-width: 25rem;
+      border-radius: var(--border-radius);
+
+      & > * {
+        padding: 0.5rem;
+      }
+
+      & .title {
+        background-color: var(--clr-bg-secondary);
+        border-top-left-radius: var(--border-radius);
+        border-top-right-radius: var(--border-radius);
+      }
+
+      & .author-name {
+        font-style: italic;
+        color: var(--clr-bg-secondary);
+      }
+
+      & .delete-btn {
+        background-color: var(--clr-bg-error);
+      }
+
+      & .read-btn {
+        display: inline-flex;
+        margin-right: 1rem;
+        gap: 3px;
+        background-color: var(--clr-bg-primary);
+      }
+
+      & .read {
+        background-color: var(--clr-bg-accent);
+      }
+    }
+  }
 
   & .popup-form {
     & .form-cont {

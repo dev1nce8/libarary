@@ -15,18 +15,20 @@
       </header>
       <main>
         <div class="popup-form">
-          <button>Add Book</button>
-          <div class="form-cont">
+          <button id="toggle-form-btn">Add Book</button>
+          <div id="form-cont" class="form-cont hidden">
             <h2>Add Form</h2>
             <form>
               <label>
-                <span>Title:</span> <input type="text" name="title" />
+                <span>Title:</span>
+                <input id="title-input" type="text" name="title" required />
               </label>
               <label>
-                <span>Author:</span> <input type="text" name="author" />
+                <span>Author:</span>
+                <input id="author-input" type="text" name="author" required />
               </label>
-              <button type="button">Submit</button>
-              <button type="clear">Reset</button>
+              <button id="submit-btn" type="button">Submit</button>
+              <button type="reset">Reset</button>
             </form>
           </div>
         </div>
